@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS EXAM</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- <header class="d-flex position-relative"> -->
+    <nav class="custom-nav navbar-expand-lg bg-dark">
+      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+      <ul class="list-unstyled">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"
+            >Now playing</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link-data" href="#">Popular</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link-data" href="#">Top rated</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Trending</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link-data" href="#">Upcoming</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+      </ul>
+      <div class="navbar-collapser">
+        <img src="imgs/logo.png" class="mt-4" alt="" />
+        <div class="collapse-icon">
+          <button id="closeBtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="globals">
+          <i class="fa-solid fa-globe fs-5 text-dark d-block mb-3"></i>
+          <i class="fa-solid fa-share-from-square fs-5 text-dark"></i>
+        </div>
+      </div>
+    </nav>
+    <!-- </header> -->
+    <!-- ----------------------------------------- -->
+    <main class="p-5">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-md-6">
+            <div class="form-floating mb-3 text-white">
+              <input
+                type="search"
+                class="form-control bg-dark"
+                id="floatingInput"
+                placeholder="get movies by word..."
+              />
+              <label for="floatingInput">get movies by word...</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-floating text-white">
+              <input
+                type="search"
+                class="form-control bg-dark"
+                id="searchOnAll"
+                placeholder="All Movies"
+              />
+              <label for="searchOnAll">All Movies</label>
+            </div>
+          </div>
+        </div>
+        <div class="row text-dark g-4" id="rowContent"></div>
+      </div>
+    </main>
+    <footer class="contactUs-section p-5" id="contactUs">
+      <div class="container">
+        <h2 class="mb-4 text-white">Contact Us</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <input
+              id="nameInput"
+              type="text"
+              placeholder="Enter your name"
+              class="text-center text-white bg-black border-0 border-bottom border-white border-1 form-control"
+            />
+            <div
+              class="bg-danger w-100 p-2 mt-2 d-flex justify-content-center align-items-center d-none"
+              id="ErrorMesgName"
+            >
+              <p class="text-white fs-5 rounded-3">
+                Your name should contain at least 3 letters
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <input
+              id="emailInput"
+              type="email"
+              placeholder="Enter your Email"
+              class="text-center text-white bg-black border-0 border-bottom border-white border-1 form-control"
+            />
+            <div
+              class="bg-danger w-100 p-2 mt-2 d-flex justify-content-center align-items-center d-none"
+              id="ErrorMesgEmail"
+            >
+              <p class="text-white fs-5 rounded-3">Enter Valid Email</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <input
+              id="phoneInput"
+              type="number"
+              placeholder="Enter your phone"
+              class="text-center text-white bg-black border-0 border-bottom border-white border-1 form-control"
+            />
+            <div
+              class="bg-danger w-100 p-2 mt-2 d-flex justify-content-center align-items-center d-none"
+              id="ErrorMesgPhone"
+            >
+              <p class="text-white fs-5 rounded-3">Enter Valid Phone</p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <input
+              id="ageInput"
+              type="number"
+              placeholder="Enter your Age"
+              class="text-center text-white bg-black border-0 border-bottom border-white border-1 form-control"
+            />
+            <div
+              class="bg-danger w-100 p-2 mt-2 d-flex justify-content-center align-items-center d-none"
+              id="ErrorMesgAge"
+            >
+              <p class="text-white fs-5 rounded-3">Enter Valid Age</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <input
+              id="passwordInput"
+              type="password"
+              placeholder="Enter your Password"
+              class="text-center text-white bg-black border-0 border-bottom border-white border-1 form-control"
+            />
+            <div
+              class="bg-danger w-100 p-2 mt-2 d-flex justify-content-center align-items-center d-none"
+              id="ErrorMesgPassword"
+            >
+              <p class="text-white fs-5 rounded-3">
+                Enter valid password Minimum eight characters, at least one
+                letter and one number:
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <input
+              id="checkPasswordInput"
+              type="password"
+              placeholder="Enter your Re-Password"
+              class="text-center text-white bg-black border-0 border-bottom border-white border-1 form-control"
+            />
+            <div
+              class="bg-success w-100 p-2 mt-2 d-flex justify-content-center align-items-center d-none"
+              id="matchedMesgPassword"
+            >
+              <p class="text-white fs-5 rounded-3">Matched Password</p>
+            </div>
+            <div
+              class="bg-danger w-100 p-2 mt-2 d-flex justify-content-center align-items-center d-none"
+              id="notMatchedMesgPassword"
+            >
+              <p class="text-white fs-5 rounded-3">
+                Not Matched Password try to enter the correct password
+              </p>
+            </div>
+          </div>
+          <button
+            class="mt-3 btn btn-outline-danger w-25 position-relative start-50 translate-middle-x"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </footer>
+    <script src="js/all.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
